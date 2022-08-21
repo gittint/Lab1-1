@@ -40,7 +40,7 @@ a{
 .row{
     display: flex;
     justify-content: space-evenly;
-    margin: 0 150px;
+    flex-wrap: wrap;
 }
 
 .col{
@@ -50,4 +50,5 @@ a{
 
 .col-3{
     width: 362px;
+    margin: 0 20px 100px;
 }
