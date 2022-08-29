@@ -1,0 +1,166 @@
+
+@import "base";
+
+html{
+    background-color: #cad3d3;
+}
+
+.app{
+    &__list{
+        margin-top: 70px;
+    }
+
+    &__item{
+
+        &--header{
+            height: 272px;
+            position: relative;
+
+            &-img{
+                width: 100%;
+                height: 100%;
+                -webkit-filter: contrast(1.3) brightness(0.8) sepia(0.3) saturate(1.5) hue-rotate(-20deg);
+                filter: contrast(1.3) brightness(0.8) sepia(0.3) saturate(1.5) hue-rotate(-20deg);
+            }
+
+            &-desc{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                top: 41%;
+                left: 0%;
+                color: $white-color;
+                font-size: 32px;
+
+                &--child{
+                    padding-top: 15px;
+                    font-size: 12px;
+                }
+            }
+
+            &-pertour{
+                width: 120px;
+                height: 120px;
+                background-color: $white-color;
+                position: absolute;
+                top: -21%;
+                left: 33%;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &-textbox{
+                    text-align: center;
+                }
+
+                &-number{
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
+
+                &-text{
+                    color: $text-color;
+                }
+            }
+
+            &-mark{
+
+                &-img{
+                    position: absolute;
+                    top: -4%;
+                    left: -4%;
+                }
+
+                &--text{
+                    position: absolute;
+                    top: 5%;
+                    left: 1.1%;
+                    color: $white-color;
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &--body{
+            text-align: center;
+            background-color: $white-color;
+
+            &-head{
+                padding: 30px 0;
+
+                &-subtitle{
+                    font-size: 30px;
+                    color: $text-color;
+                }
+            }
+
+            &-item{
+                padding: 15px 0;
+                color: $text-color;
+                font-size: 16px;
+
+                &:nth-child(2n+1){
+                    background-color: $bg-color;
+                }
+            }
+        }
+
+        &--footer{
+            background-color: $white-color;
+            text-align: center;
+            padding: 60px 0;
+
+            &-btn{
+                font-size: 23px;
+                text-transform: uppercase;
+                border: 2px solid black;
+                padding: 15px 25px;
+            }
+        }
+
+        &:nth-child(1) {
+
+            .app__item--header-pertour-number{
+                color: $primary-first-color;
+            }
+
+            .app__item--footer-btn{
+                color: $primary-first-color;
+                border: 2px solid $primary-first-color;
+            }
+        }
+
+        &:nth-child(2) {
+
+            .app__item--header-pertour-number{
+                color: $primary-second-color;
+            }
+
+            .app__item--header-pertour{
+                background-color: $grey-color;
+            }
+
+            .app__item--footer-btn{
+                color: $white-color;
+            background-color:  $primary-second-color;
+            border: 2px solid $primary-second-color;
+            }
+        }
+
+        &:nth-child(3){
+
+            .app__item--header-pertour-number{
+                color: $primary-third-color;
+            }
+
+            .app__item--footer-btn{
+                color: $primary-third-color;
+                border: 2px solid $primary-third-color;
+            }
+        }
+
+    }
+}
+
